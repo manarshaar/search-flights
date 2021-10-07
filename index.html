@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>SkyScanner</h1></header>
+    <div class="main-container container">
+      <form class="pick_flight_form flex" autocomplete="off">
+
+        <div class="form_unit">
+          <label for="flight_from">From</label>
+          <input
+            type="text"
+            name="flight_from"
+            id="flight_from"
+            oninput="typingSearch(false)"
+            list="flight_from_options"
+          />
+          <datalist id="flight_from_options"> </datalist>
+          <input type="hidden" name="flight_from_id" id="flight_from_id" />
+          <span>This field is required.</span>
+        </div>
+
+        <div class="form_unit">
+          <label for="flight_to">To</label>
+          <input
+            type="text"
+            name="flight_to"
+            id="flight_to"
+            oninput="typingSearch(true)"
+            list="flight_to_options"
+          />
+          <datalist id="flight_to_options"> </datalist>
+          <input type="hidden" name="flight_to_id" id="flight_to_id" />
+          <span>This field is required.</span>
+        </div>
+
+        <div class="form_unit">
+          <label for="flight_depart">Depart</label>
+          <input type="date" name="flight_depart" id="flight_depart" />
+          <span>This field is required.</span>
+        </div>
+        <div class="form_unit">
+          <label for="flight_return">Return</label>
+          <input type="date" name="flight_return" id="flight_return" />
+          <span>This field is required.</span>
+        </div>
+
+        <input type="submit" id="flight_search" value="Search" />
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
